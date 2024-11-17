@@ -1,0 +1,7 @@
+@font-face {
+    font-family: myFont;
+    font-style: normal;
+    font-weight: normal;
+    src: url('@/assets/font/33333.ttf');
+    font-display: swap;
+}

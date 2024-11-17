@@ -1,0 +1,98 @@
+// :deep(.el-menu-item-group__title) {
+//     background-color:$layout-slider_bgColor ;
+// }
+// :deep(.el-menu-item) {
+//     background-color:$layout-slider_bgColor ;
+// }
+// :deep(.el-menu-item):hover {
+//     background-color: #19AA8D;
+// }
+
+.layout {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+
+    .layout-menu {
+        width: $layout-slider_width;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $layout-slider_bgColor;
+        transition: all .3s;
+
+
+        &.bgMenuClassDark {
+            background-color: $layout-slider_bgDarkColor;
+        }
+
+        .el-menu {
+            border-right: none;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden !important;
+            background: url('../../assets/image/layoutBg.png') no-repeat 0% 100%;
+            transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+
+            :deep(span) {
+                font-size: $layout-slider_font_size;
+            }
+
+            :deep(.el-icon) {
+                font-size: 16px;
+            }
+
+        }
+
+
+
+        /*子菜单悬浮样式*/
+        :deep(.el-menu-item):hover {
+            background: $layout-slider_hover_bgColor !important;
+        }
+
+
+
+        &.layout-min-menu {
+            width: $layout-slider_min_width;
+        }
+    }
+
+    .layout-main {
+        width: calc(100% - $layout-slider_width);
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: $layout-slider_width;
+        display: flex;
+        flex-direction: column;
+        transition: all .3s;
+
+        .layout-header {
+            width: 100%;
+            height: $layout-header_height;
+        }
+
+        .main-content {
+            width: 100%;
+            padding: 10px;
+            overflow: auto;
+            height: calc(100vh - $layout-header_height);
+
+
+        }
+
+        &.layout-max-main {
+            width: calc(100% - $layout-slider_min_width);
+            position: fixed;
+            top: 0;
+            left: $layout-slider_min_width;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+    }
+}

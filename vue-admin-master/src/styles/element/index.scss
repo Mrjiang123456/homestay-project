@@ -1,0 +1,19 @@
+/* 只需要重写你需要的即可 */
+@forward 'element-plus/theme-chalk/src/common/var.scss' with ($colors: (
+    'primary': ( // 主色
+      'base':#0F5197,
+    ),
+    'success': ( // 成功色
+      'base': #199D33,
+    ),
+    'info': (  // 默认色
+       'base': #4e4f51,
+    ),
+    'warning': ( // 警告色
+      'base': #e26f03,
+    ),
+    'danger': ( // 危险色
+      'base': #992b2b,
+    ),
+  ));
+
